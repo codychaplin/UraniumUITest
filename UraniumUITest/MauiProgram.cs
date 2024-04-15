@@ -31,7 +31,9 @@ namespace UraniumUITest
         static MauiAppBuilder RegisterPages(this MauiAppBuilder builder)
         {
             builder.Services.AddSingleton<HomePage>();
+            builder.Services.AddSingleton<TestPage>();
             builder.Services.AddTransient<HomeViewModel>();
+            builder.Services.AddTransient<TestViewModel>();
 
             return builder;
         }

@@ -7,8 +7,17 @@
     xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
     x:DataType="local:HomeViewModel">
     <VerticalStackLayout Margin="10" Spacing="10">
+
+        <!--  doesn't work  -->
         <material:AutoCompleteTextField Title="load data" ItemsSource="{Binding Items}" />
+
+        <!--  works  -->
         <material:AutoCompleteTextField Title="pre-set" ItemsSource="{Binding PresetItems}" />
+
+        <!--  works  -->
         <material:AutoCompleteTextField x:Name="autoCompNamed" Title="named" />
+
+        <!--  try this page to test with regular constructor injection  -->
+        <Button Command="{Binding GoToTestPageCommand}" Text="Go To TestPage" />
     </VerticalStackLayout>
 </ContentView>

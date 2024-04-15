@@ -1,4 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
 namespace UraniumUITest;
@@ -61,5 +62,11 @@ public partial class HomeViewModel : ObservableObject
         {
             Items.Add(item);
         }
+    }
+
+    [RelayCommand]
+    async Task GoToTestPage()
+    {
+        await Shell.Current.GoToAsync("TestPage");
     }
 }
